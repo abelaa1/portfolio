@@ -1,8 +1,6 @@
-import extractorSvelte from '@unocss/extractor-svelte';
-import { defineConfig, presetUno, presetWebFonts, presetIcons } from 'unocss';
+import { defineConfig, presetIcons, presetWebFonts } from 'unocss';
 
 export default defineConfig({
-	extractors: [extractorSvelte()],
 	content: {
 		pipeline: {
 			include: [
@@ -13,7 +11,6 @@ export default defineConfig({
 		}
 	},
 	presets: [
-		presetUno(),
 		presetWebFonts({
 			fonts: {
 				sans: {
@@ -27,17 +24,9 @@ export default defineConfig({
 		presetIcons({
 			extraProperties: {
 				display: 'inline-block',
-				'vertical-align': 'middle'
+				'vertical-align': 'middle',
+				'font-size': '1em'
 			}
 		})
-	],
-	shortcuts: [
-		{
-			col: 'flex flex-col',
-			row: 'flex flex-row',
-
-			'col-center': 'col justify-center items-center',
-			'row-center': 'row justify-center items-center'
-		}
 	]
 });

@@ -1,41 +1,31 @@
-import { Platform } from '$lib/types';
+import BaseData from './base';
 import { getSkills } from './skills';
+import type { Skill } from './types';
 
-export const title = 'Home';
+const title = 'Home';
 
-export const name = 'Name';
+const hero: {
+	title: string;
+	description: string;
+	links: Array<{ label: string; href: string; icon: `i-carbon-${string}` }>;
+} = {
+	title: `${BaseData.fullName},`,
+	description:
+		'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+	links: [
+		{ label: 'GitHub', href: 'https://github.com', icon: 'i-carbon-logo-github' },
+		{ label: 'LinkedIn', href: 'https://linkedin.com', icon: 'i-carbon-logo-linkedin' },
+		{ label: 'Twitter', href: 'https://twitter.com', icon: 'i-carbon-logo-twitter' },
+		{ label: 'Email', href: 'mailto:riadh.adrani@pm.me', icon: 'i-carbon-at' }
+	]
+};
 
-export const lastName = 'LastName';
+const carousel: Array<Skill> = getSkills();
 
-export const description =
-	'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!';
+const HomeData = {
+	title,
+	hero,
+	carousel
+};
 
-export const links: Array<{ platform: Platform; link: string }> = [
-	{ platform: Platform.GitHub, link: 'https://github.com/' },
-	{
-		platform: Platform.Linkedin,
-		link: 'https://www.linkedin.com/'
-	},
-	{
-		platform: Platform.Twitter,
-		link: 'https://twitter.com/'
-	},
-	{
-		platform: Platform.StackOverflow,
-		link: 'https://stackoverflow.com/'
-	},
-	{
-		platform: Platform.Email,
-		link: 'riadh_adrani@hotmail.fr'
-	},
-	{
-		platform: Platform.Youtube,
-		link: 'https://www.youtube.com'
-	},
-	{
-		platform: Platform.Facebook,
-		link: 'https://www.facebook.com'
-	}
-];
-
-export const skills = getSkills('js', 'css', 'html', 'reactjs', 'sass', 'svelte', 'ts');
+export default HomeData;

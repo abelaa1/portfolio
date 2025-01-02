@@ -1,8 +1,10 @@
 import Assets from './assets';
 import { getSkills } from './skills';
-import { ContractType, type Experience } from '../types';
+import { ContractType, type Experience } from './types';
 
-export const items: Array<Experience> = [
+const title = 'Experience';
+
+const items: Array<Experience> = [
 	{
 		slug: 'open-sourcer',
 		company: 'Self-employed',
@@ -50,4 +52,6 @@ export const items: Array<Experience> = [
 	}
 ];
 
-export const title = 'Experience';
+const ExperienceData = { title, items };
+
+export default ExperienceData;
