@@ -1,0 +1,26 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for cloud body -->
+    <linearGradient id="cloudGradient" x1="0" y1="0" x2="1" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="20%" stop-color="#990000" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#660000" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+  <!-- Main cloud shapes -->
+  <path 
+    d="M50 60C40 40 70 30 90 40C100 10 140 20 130 50C160 50 170 80 140 85C130 100 90 90 70 85C50 100 30 90 50 60Z"
+    fill="url(#cloudGradient)"
+    opacity="0.7"
+  />
+  <!-- Highlights -->
+  <circle cx="80" cy="50" r="12" fill="white" opacity="0.2" />
+  <circle cx="120" cy="60" r="10" fill="white" opacity="0.15" />
+  <!-- Edge detailing -->
+  <path 
+    d="M50 60C40 40 70 30 90 40C100 10 140 20 130 50C160 50 170 80 140 85C130 100 90 90 70 85C50 100 30 90 50 60Z"
+    stroke="#990000"
+    stroke-opacity="0.5"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+</svg>
